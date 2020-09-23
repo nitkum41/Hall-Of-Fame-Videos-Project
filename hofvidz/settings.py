@@ -28,7 +28,7 @@ SECRET_KEY = 'uvnp*9uvqe#(la&p6-k12as#at*49!%ssyua&hd-x&9$jucdqt'
 # SECURITY WARNING: don't run with debug turned on in production!OS
 DEBUG = False
 
-ALLOWED_HOSTS = ['arcane-lowlands-10786.herokuapp.com','niteshhofvidz.com','www.niteshhofvidz.com']
+ALLOWED_HOSTS = ['still-castle-29178.herokuapp.com','niteshhofvidz.com','www.niteshhofvidz.com']
 
 
 LOGIN_URL = 'login'
