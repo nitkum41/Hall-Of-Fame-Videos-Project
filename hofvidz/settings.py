@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -25,7 +26,7 @@ TEMPLATE_DIR = BASE_DIR / 'templates'
 SECRET_KEY = 'uvnp*9uvqe#(la&p6-k12as#at*49!%ssyua&hd-x&9$jucdqt'
 
 # SECURITY WARNING: don't run with debug turned on in production!OS
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -55,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'hofvidz.urls'
@@ -82,10 +84,7 @@ WSGI_APPLICATION = 'hofvidz.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(BASE_DIR / 'db.sqlite3'),
-    }
+    'default': dj_database_url.config()
 }
 
 
@@ -128,3 +127,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = BASE_DIR / 'static'
+
+STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
