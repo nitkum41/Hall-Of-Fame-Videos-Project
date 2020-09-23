@@ -1,0 +1,28 @@
+{% extends 'halls/base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <h2>Create Hall Of Fame</h2>
+  <form class="" method="post">
+    {% csrf_token %}
+    {% load widget_tweaks %}
+    {% for field in form %}
+    <div class="form-group" {% if field.errors %} alert alert-danger {% endif %}>
+      {{ field.errors }}
+      {{ field.label_tag }}
+      {% render_field field class="form-control" %}
+
+    </div>
+
+    {% endfor %}
+    <button class="btn btn-primary" type="submit" name="button">create</button>
+
+  </form>
+
+</div>
+
+
+
+
+{% endblock %}
