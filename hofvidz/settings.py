@@ -28,7 +28,7 @@ SECRET_KEY = 'uvnp*9uvqe#(la&p6-k12as#at*49!%ssyua&hd-x&9$jucdqt'
 # SECURITY WARNING: don't run with debug turned on in production!OS
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['obscure-tor-22322.herokuapp.com','nitkumhofvidz.com','www.nitkumhofvidz.com']
 
 
 LOGIN_URL = 'login'
