@@ -12,6 +12,7 @@ dj-database-url = "*"
 whitenoise = "*"
 django = "*"
 django-widget-tweaks = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.7"
